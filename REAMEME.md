@@ -1,5 +1,5 @@
 # Examples to demonstarte Java functionality
 
-## Sample with Java Concurrent package, Java NIO package and Threads.
+## Samples contains usage of Java packages like Concurrent,NIO and Threads.
 
-### Each packages demonstates the different feature of Java.
+### Each package demonstates different feature of Java.
