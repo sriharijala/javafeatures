@@ -8,6 +8,7 @@ The MessageLoop thread prints out a series of messages. If interrupted before it
 
 public class SimpleThread {
 
+	/*
 	// Display a message, preceded by
 	// the name of the current thread
 	static void threadMessage(String message) {
@@ -17,7 +18,7 @@ public class SimpleThread {
 		System.out.format("%s: %s%n", threadName, message);
 	}
 
-	private static class MessageLoop implements Runnable {
+	private static class MessageLoop implements RunnableTest {
 
 		public void run() {
 
@@ -85,4 +86,6 @@ public class SimpleThread {
 		}
 		threadMessage("Finally!");
 	}
+	
+	*/
 }

@@ -2,6 +2,7 @@ package com.library.threads;
 
 public class DeadLock {
 
+	/*
 	static class Friend {
 		private final String name;
 
@@ -28,18 +29,18 @@ public class DeadLock {
 		final Friend alphonse = new Friend("Alphonse");
 		final Friend gaston = new Friend("Gaston");
 		
-		new Thread(new Runnable() {
+		new Thread(new RunnableTest() {
 			public void run() {
 				alphonse.bow(gaston);
 			}
 		}).start();
 		
 		
-		new Thread(new Runnable() {
+		new Thread(new RunnableTest() {
 			public void run() {
 				gaston.bow(alphonse);
 			}
 		}).start();
 	}
-
+*/
 }
