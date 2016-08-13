@@ -53,6 +53,7 @@ public class SemaphoresDemo {
 		for(int i=0; i < Pool.POOL_SIZE; i++) {
 			es.execute(itemAccess);
 		}
+		
 	}	
 }
 
