@@ -81,7 +81,7 @@ public class FolderProcessor extends RecursiveTask<List<String>> {
 		// elements,
 		// write a message to the console to indicate this circumstance.
 		if (tasks.size() > 50) {
-			System.out.printf("%s: %d tasks ran.\n", file.getAbsolutePath(), tasks.size());
+			System.out.printf("%s: %d tasks ran.%n", file.getAbsolutePath(), tasks.size());
 		}
 		
 		// add to the list of files the results returned by the subtasks
@@ -109,7 +109,7 @@ public class FolderProcessor extends RecursiveTask<List<String>> {
 		return name.endsWith(extension);
 	}
 	
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	   {
 	      //Create ForkJoinPool using the default constructor.
 	      ForkJoinPool pool = new ForkJoinPool();
@@ -128,18 +128,18 @@ public class FolderProcessor extends RecursiveTask<List<String>> {
 	      //until the three tasks have finished their execution.
 	      do
 	      {
-	         System.out.printf("******************************************\n");
-	         System.out.printf("Main: Parallelism: %d\n", pool.getParallelism());
-	         System.out.printf("Main: Active Threads: %d\n", pool.getActiveThreadCount());
-	         System.out.printf("Main: Task Count: %d\n", pool.getQueuedTaskCount());
-	         System.out.printf("Main: Steal Count: %d\n", pool.getStealCount());
-	         System.out.printf("******************************************\n");
+	         System.out.printf("******************************************%n");
+	         System.out.printf("Main: Parallelism: %d%n", pool.getParallelism());
+	         System.out.printf("Main: Active Threads: %d%n", pool.getActiveThreadCount());
+	         System.out.printf("Main: Task Count: %d%n", pool.getQueuedTaskCount());
+	         System.out.printf("Main: Steal Count: %d%n", pool.getStealCount());
+	         System.out.printf("******************************************%n");
 	         try
 	         {
 	            TimeUnit.SECONDS.sleep(1);
 	         } catch (InterruptedException e)
 	         {
-	            e.printStackTrace();
+	        	 System.out.print(e);
 	         }
 	      } while ((!system.isDone()) || (!apps.isDone()) || (!documents.isDone()));
 	      
@@ -151,12 +151,12 @@ public class FolderProcessor extends RecursiveTask<List<String>> {
 	      List<String> results;
 	      
 	      results = system.join();
-	      System.out.printf("System: %d files found.\n", results.size());
+	      System.out.printf("System: %d files found.%n", results.size());
 	      
 	      results = apps.join();
-	      System.out.printf("Apps: %d files found.\n", results.size());
+	      System.out.printf("Apps: %d files found.%n", results.size());
 	      
 	      results = documents.join();
-	      System.out.printf("Documents: %d files found.\n", results.size());
+	      System.out.printf("Documents: %d files found.%n", results.size());
 	   }
 }

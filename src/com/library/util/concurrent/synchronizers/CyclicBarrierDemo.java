@@ -60,6 +60,7 @@ public class CyclicBarrierDemo {
 				try {
 					
 					barrier.await();
+					
 				} catch (InterruptedException | BrokenBarrierException e) {
 					
 					e.printStackTrace();
